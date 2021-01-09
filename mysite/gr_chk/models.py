@@ -32,11 +32,11 @@ class boq(models.Model):
     path = models.CharField(max_length=50)
     parent = models.CharField(max_length=50)
     item_name = models.CharField(max_length=200)
-    unit_name = models.CharField(max_length=10)
-    price_a = models.DecimalField(max_digits=10, decimal_places=2)
-    price_b = models.DecimalField(max_digits=10, decimal_places=2)
-    price_c = models.DecimalField(max_digits=10, decimal_places=2)
-    con_val = models.DecimalField(max_digits=10, decimal_places=2)
+    unit_name = models.CharField(max_length=10, null=True)
+    price_a = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    price_b = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    price_c = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    con_val = models.DecimalField(max_digits=10, decimal_places=2, null=True)
 
     def __str__(self):
         return self.path
