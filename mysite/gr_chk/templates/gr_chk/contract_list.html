@@ -1,25 +1,36 @@
-<html>
-    <head>
-        <title>My Gr_CHK Homepage</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Test</a></h1>
-        </div>
+{% extends 'accounts/new_base.html' %}
 
-          <div>
-            <table>
+{% load static %}
+
+
+{% block content %}
+  <div class="container-fluid">
+    <ul class="list-group">
+      <li class="list-group-item active">ข้อมูลสัญญาในระบบ</li>
+      <li class="list-group-item">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
+              <thead>
                 <tr>
                   <th>ชื่อสัญญา</th>
                   <th>PO</th>
                 </tr>
-              {% for contract in contracts %}
-                <tr>
-                  <td>{{ contract }}</td>
-                  <td>{{ contract.po }}</td>
-                </tr>
-              {% endfor %}
+              </thead>
+              <tbody>
+                {% for contract in contracts %}
+                  <tr>
+                    <td><a href="{% url 'contract_detail' pk=contract.pk %}">{{ contract }}</a></td>
+                    <td>{{ contract.po }}</td>
+                  </tr>
+                {% endfor %}
+              </<tbody>
             </table>
           </div>
-    </body>
-</html>
+          <p>คลิกที่ชื่อสัญญาเพื่อดูรายละเอียด</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+{% endblock content %}
