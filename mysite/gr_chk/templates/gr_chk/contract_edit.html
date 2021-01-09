@@ -1,0 +1,20 @@
+{% extends 'accounts/new_base.html' %}
+
+{% block content %}
+
+  <div class="container-fluid">
+    <ul class="list-group">
+      <li class="list-group-item active">{{ title }}</li>
+      <li class="list-group-item">
+        <form method="POST" class="post-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input class="btn btn-primary" type="submit" value="Submit">
+          <a class="btn btn-primary" href="/gr_chk" role="button">กลับหน้าหลัก</a>
+        </form>
+      </li>
+
+    </ul>
+  </div>
+
+{% endblock content %}

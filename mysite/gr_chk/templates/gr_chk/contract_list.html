@@ -8,6 +8,12 @@
     <ul class="list-group">
       <li class="list-group-item active">ข้อมูลสัญญาในระบบ</li>
       <li class="list-group-item">
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+          คลิกที่ชื่อสัญญาเพื่อดูรายละเอียด/แก้ไขข้อมูล
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
@@ -15,6 +21,7 @@
                 <tr>
                   <th>ชื่อสัญญา</th>
                   <th>PO</th>
+                  <th>แก้ไขข้อมูล</th>
                 </tr>
               </thead>
               <tbody>
@@ -22,12 +29,13 @@
                   <tr>
                     <td><a href="{% url 'contract_detail' pk=contract.pk %}">{{ contract }}</a></td>
                     <td>{{ contract.po }}</td>
+                    <td>Click Me</td>
                   </tr>
                 {% endfor %}
               </<tbody>
             </table>
           </div>
-          <p>คลิกที่ชื่อสัญญาเพื่อดูรายละเอียด</p>
+          <a href="{% url 'contract_add' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         </div>
       </li>
     </ul>

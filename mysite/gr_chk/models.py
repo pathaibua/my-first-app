@@ -9,9 +9,6 @@ class Contract(models.Model):
     def __str__(self):
         return self.contract_name
 
-    def last_gr_count():
-        pass
-
 class Route(models.Model):
     contract = models.ForeignKey(Contract, on_delete=models.CASCADE)
 
