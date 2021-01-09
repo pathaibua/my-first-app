@@ -18,6 +18,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('contracts/', include('contracts.urls')),
+    path('gr_chk/', include('gr_chk.urls')),
     path('polls/', include('polls.urls')),
     #path('accounts/', include('accounts.urls')),
     path('', include('accounts.urls')),
