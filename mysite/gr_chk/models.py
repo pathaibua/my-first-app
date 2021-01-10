@@ -3,14 +3,14 @@ from django.db import models
 # Create your models here.
 
 class Contract(models.Model):
-    contract_name = models.CharField(max_length=50)
+    contract_name = models.CharField('ชื่อสัญญา', max_length=50)
     po = models.CharField(max_length=10)
 
     def __str__(self):
         return self.contract_name
 
 class Route(models.Model):
-    contract = models.ForeignKey(Contract, on_delete=models.CASCADE)
+    contract = models.ForeignKey(Contract, on_delete=models.CASCADE, related_name='routes')
 
     def number():
         no = Route.objects.count()
@@ -20,8 +20,8 @@ class Route(models.Model):
             return no + 1
 
     route_order = models.IntegerField(default=number)
-    plan_id = models.CharField(max_length=12)
-    route_name = models.CharField(max_length=100)
+    plan_id = models.CharField('เลขที่แบบ', max_length=12)
+    route_name = models.CharField('สถานที่', max_length=100)
     route_level = models.CharField(max_length=1)
     def __str__(self):
         return self.route_name
