@@ -26,6 +26,7 @@ SECRET_KEY = '0&n)t00ei_&s8#d)yf*o*j)09=gx^r+n4p^$^lg%hym+4e)j83'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['pathaibua.pythonanywhere.com']
 
 
 # Application definition
@@ -41,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,6 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#STATIC_ROOT = '/home/PathaiBua/pathaibua.pythonanywhere.com/mysite/static'
 
 LOGIN_URL = 'login'
 

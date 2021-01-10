@@ -58,7 +58,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/gr_chk">Gr Check Home</a>
-                                    <a class="nav-link" href="/gr_chk/new/">เพิ่มสัญญา</a>
+                                    <a class="nav-link" href="{% url 'contract_add' %}">เพิ่มสัญญา</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Upload Boq</a>
                                 </nav>
                             </div>
@@ -103,8 +103,8 @@
                             </a>
                             <div class="collapse" id="collapseLinks" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/gr_chk">น้ำขาย/คาดการณ์</a>
-                                    <a class="nav-link" href="/gr_chk/new/">งบลงทุน</a>
+                                    <a class="nav-link" href="https://app.powerbi.com/view?r=eyJrIjoiNDAxOTJkYzgtZDFkYy00YzNkLThmYzktOGIzNzA3OTE2OWRhIiwidCI6IjhlYzMzMGU1LTFjMDUtNGQ1Yi05Nzg2LWM1Nzk4MjFjNmM3NCIsImMiOjEwfQ%3D%3D" target="_blank">น้ำขาย/คาดการณ์</a>
+                                    <a class="nav-link" href="https://app.powerbi.com/view?r=eyJrIjoiNDM2NGVkZmUtYzQ2NC00MjE3LTk0ZGUtNzEwMWNkM2ZlMjhjIiwidCI6IjhlYzMzMGU1LTFjMDUtNGQ1Yi05Nzg2LWM1Nzk4MjFjNmM3NCIsImMiOjEwfQ%3D%3D" target="_blank">งบลงทุน</a>
                                 </nav>
                             </div>
 
@@ -126,6 +126,7 @@
                   {% block content %}
                   {% endblock content %}
                 </main>
+                <!--
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -138,6 +139,7 @@
                         </div>
                     </div>
                 </footer>
+              -->
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
